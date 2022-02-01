@@ -12,10 +12,10 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="{% static 'analitiki-obyasnili-vsplesk-zakrytyh-prodazh-elitki-v-moskve_1.jpg' %}">
+<div class="bgded overlay" style="background-image:url('demo/backgrounds/analitiki-obyasnili-vsplesk-zakrytyh-prodazh-elitki-v-moskve_1.jpg');">
   <!-- ################################################################################################ -->
   <div class="wrapper row0">
-    <div id="topbar" class="hoc clear"> 
+    <div id="topbar" class="hoc clear">
       <!-- ################################################################################################ -->
       <div class="fl_left">
         <ul class="nospace">
@@ -42,7 +42,7 @@
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="index.html">BaitHouse</a></h1>
+        <h1><a href="{% url 'home' %}">BaitHouse</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
@@ -203,7 +203,7 @@
   <div class="hoc container center clear"> 
     <!-- ################################################################################################ -->
     <blockquote class="nospace btmspace-50 font-x1">Augue vitae faucibus nullam ut aliquet sapienproin euismod enim vel lacinia ultrices risus mi feugiat diam vitae ullamcorper tortor purus at lectus duis arcu sapien sollicitudin a dolor non porttitor eleifend sem vivamus hendrerit dolor in viverra auctor tellus.</blockquote>
-    <figure><img class="btmspace-15" src="{% static 'фы.jpg' %}" alt="">
+    <figure><img class="btmspace-15" src="{% static 'analitiki-obyasnili-vsplesk-zakrytyh-prodazh-elitki-v-moskve_1.jpg' %}" alt="">
       <figcaption><strong>A.Doe</strong><br>
         <em>Position, Company Name</em></figcaption>
     </figure>
