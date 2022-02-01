@@ -1,3 +1,18 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
 
-# Create your views here.
+from .forms import RegistrationForm
+from .models import User
+
+
+class RegisterView(SuccessMessageMixin, CreateView):
+    model = User
+    template_name = 'account/registration.html'
+    form_class = RegistrationForm
+    success_url = reverse_lazy('home')
+    success_message = 'Successfully registered'
+
+
+
