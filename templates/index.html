@@ -2,17 +2,19 @@
 {% load static %}
 <html>
 <head>
+ <link rel="shortcut icon" href="/images/building.png" type="image/png">
+
 <title>BaitHouse</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
-</head>
+
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<img class="bgded overlay"  style="background-image"  src="{% static 'images/bina.jpeg' %}">
+<img class="bgded overlay"  style="background-image"  src="{% static 'images/321.png' %}">
   <!-- ################################################################################################ -->
   <div class="wrapper row0">
     <div id="topbar" class="hoc clear">
@@ -49,11 +51,9 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a class="drop" href="#">Недвижимость</a>
             <ul>
-              <li><a href="{% url 'gallery' %}">Фото</a></li>
-              <li><a href="{% url 'full' %}">Full Width</a></li>
-              <li><a href="{% url 'side-bar' %}">Sidebar Left</a></li>
-              <li><a href="{% url 'sidebar-right' %}">Sidebar Right</a></li>
-              <li><a href="{% url 'basic-grid' %}">Basic Grid</a></li>
+              <li><a href="{% url 'gallery' %}">Квартиры</a></li>
+              <li><a href="{% url 'full' %}">Частные дома</a></li>
+              <li><a href="{% url 'basic-grid' %}">что то</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">Dropdown</a>
@@ -81,6 +81,8 @@
   <!-- ################################################################################################ -->
   <div id="pageintro" class="hoc clear">
     <!-- ################################################################################################ -->
+
+   <<img class="bgded overlay"  style="background-image"  src="{% static 'images/new.jpg' %}">
     <article class="introtxt">
       <p>Дом для счастливых семей</p>
       <h2 class="heading">ЭЛ КЛАССИК ПЛЮС</h2>
@@ -132,8 +134,8 @@
       <h2 class="heading">что вас интересует?</h2>
       <footer>
         <ul class="nospace inline pushright">
-          <li><a class="btn" href="#">Частные дома</a></li>
-          <li><a class="btn inverse" href="#">квартиры</a></li>
+          <li><a class="btn" href="{% url 'full' %}">Частные дома</a></li>
+          <li><a class="btn inverse" href="{% url 'gallery' %}">квартиры</a></li>
         </ul>
       </footer>
     </article>

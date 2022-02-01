@@ -2,7 +2,7 @@
 {% load static %}
 <html>
 <head>
-<title>Limberly | Pages | Full Width</title>
+<title>BaitHouse</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
@@ -42,11 +42,11 @@
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="../index.html">Limberly</a></h1>
+        <h1><a href="{% url 'home' %}">BaitHouse</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li class="active"><a class="drop" href="#">Pages</a>
             <ul>
               <li><a href="gallery.html">Gallery</a></li>
