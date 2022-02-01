@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -15,4 +16,5 @@ class RegisterView(SuccessMessageMixin, CreateView):
     success_message = 'Successfully registered'
 
 
-
+class SignInView(LoginView):
+    template_name = 'account/login.html'

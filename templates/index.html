@@ -25,7 +25,13 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Login</a></li>
+          {% if not request.user.is_authenticated %}
           <li><a href="{% url 'register' %}">Register</a></li>
+          <a href="{% url 'login' %}"><i class="fas fa-user-circle"></i></a>
+          {% else %}
+          <a href="{% url 'logout' %}"><i style="color: black;" class="fas fa-user-circle"></i></a>
+          {% endif %}
+
         </ul>
       </div>
       <div class="fl_right">
@@ -44,19 +50,19 @@
     <header id="header" class="hoc clear">
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="{% url 'home' %}">BaitHouse</a></h1>
+        <h1><b><a bolt="" style="font-size:35px;" href="{% url 'home' %}">BaitHouse</a></h1></b>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a class="drop" href="#">Недвижимость</a>
+          <li class="active"><a style="font-size: 16px;" href="index.html">Home</a></li>
+          <li><a style="font-size: 16px;" class="drop" href="#">Недвижимость</a>
             <ul>
               <li><a href="{% url 'gallery' %}">Квартиры</a></li>
               <li><a href="{% url 'full' %}">Частные дома</a></li>
               <li><a href="{% url 'basic-grid' %}">что то</a></li>
             </ul>
           </li>
-          <li><a class="drop" href="#">Dropdown</a>
+          <li><a style="font-size: 16px;" class="drop" href="#">Dropdown</a>
             <ul>
               <li><a href="#">Level 2</a></li>
               <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -69,7 +75,9 @@
               <li><a href="#">Level 2</a></li>
             </ul>
           </li>
-          <li><a href="#">О нас</a></li>
+          <li><a style="font-size: 16px;" href="{% url 'basic-grid' %}">О нас</a></li>
+          <ul>
+          </ul>
           <li><a href="#"></a></li>
         </ul>
       </nav>
@@ -82,7 +90,7 @@
   <div id="pageintro" class="hoc clear">
 
 
-   <<img class="bgded overlay"  style="background-image"  src="{% static 'images/new.jpg' %}">
+   <img class="bgded overlay"  style="background-image"  src="{% static 'images/new.jpg' %}">
     <article class="introtxt">
       <p>Дом для счастливых семей</p>
       <h2 class="heading">ЭЛ КЛАССИК ПЛЮС</h2>
@@ -199,13 +207,15 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/04.png');">
+<div class="wrapper bgded overlay" style="background-image: {% static 'images/new.jpg' %};">
   <div class="hoc container center clear">
     <!-- ################################################################################################ -->
     <blockquote class="nospace btmspace-50 font-x1">Augue vitae faucibus nullam ut aliquet sapienproin euismod enim vel lacinia ultrices risus mi feugiat diam vitae ullamcorper tortor purus at lectus duis arcu sapien sollicitudin a dolor non porttitor eleifend sem vivamus hendrerit dolor in viverra auctor tellus.</blockquote>
+    <img  style="width: 80px; height: auto;" src="{% static 'images/dani.jpg' %}">
+    <img  style="width: 80px; height: auto;" src="{% static 'images/has.jpg' %}">
     <figure><img class="btmspace-15" src="images/demo/60x60.png" alt="">
-      <figcaption><strong>A.Doe</strong><br>
-        <em>Position, Company Name</em></figcaption>
+      <figcaption><strong style="font-size 30px;">Наши великие основатели</strong><br>
+        <em><b>BAITHOUSE</em></b></figcaption>
     </figure>
     <!-- ################################################################################################ -->
   </div>
