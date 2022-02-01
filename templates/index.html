@@ -12,7 +12,7 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<img class="bgded overlay" style="background-image"  src="{% static 'images/bina.jpeg' %}">
+<img class="bgded overlay"  style="background-image"  src="{% static 'images/bina.jpeg' %}">
   <!-- ################################################################################################ -->
   <div class="wrapper row0">
     <div id="topbar" class="hoc clear">
@@ -49,11 +49,11 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a class="drop" href="#">Недвижимость</a>
             <ul>
-              <li><a href="{% url 'gallery' %}">Gallery</a></li>
-              <li><a href="pages/full-width.html">Full Width</a></li>
-              <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-              <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-              <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+              <li><a href="{% url 'gallery' %}">Фото</a></li>
+              <li><a href="{% url 'full' %}">Full Width</a></li>
+              <li><a href="{% url 'side-bar' %}">Sidebar Left</a></li>
+              <li><a href="{% url 'sidebar-right' %}">Sidebar Right</a></li>
+              <li><a href="{% url 'basic-grid' %}">Basic Grid</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">Dropdown</a>
